@@ -1,4 +1,4 @@
-package _1_array.前綴與陣列._303_range_sum_query_Immutable;
+package _1_array.前綴與陣列._303_range_sum_query_immutable;
 
 // https://leetcode.com/problems/range-sum-query-immutable/descrip
 // [1,2,3,4,5]

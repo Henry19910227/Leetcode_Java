@@ -1,4 +1,4 @@
-package _1_array.前綴與陣列._303_range_sum_query_Immutable;
+package _1_array.前綴與陣列._303_range_sum_query_immutable;
 
 public class Solution implements Solution_303 {
     private int[] nums;
