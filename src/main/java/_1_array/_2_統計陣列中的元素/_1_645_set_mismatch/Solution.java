@@ -6,20 +6,19 @@ import java.util.Map;
 public class Solution implements Solution_645 {
     @Override
     public int[] findErrorNums(int[] nums) {
-        Map<Integer, Integer> m =  new HashMap<>();
-        int dup = 0;
-        int[] output = new int[2];
-        for (int i = 1; i <= nums.length; i++) {
-            m.put(i, i);
+        int[] arr = new int[nums.length];
+        int[] ans = new int[2];
+        for (int i = 0; i < nums.length; i++) {
+            arr[nums[i] - 1] ++;
         }
-        for (int num : nums) {
-            if (m.remove(num) != null) { continue; }
-            dup = num;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 2) {
+                ans[0] = i + 1;
+            }
+            if (arr[i] == 0) {
+                ans[1] = i + 1;
+            }
         }
-        output[0] = dup;
-        for (Integer a: m.values()) {
-            output[1] = a;
-        }
-        return output;
+        return ans;
     }
 }
